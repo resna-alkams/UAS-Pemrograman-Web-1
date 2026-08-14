@@ -174,6 +174,24 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+
+        .penyusun-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .penyusun-table th,
+        .penyusun-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .penyusun-table th {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+        }
     </style>
 </head>
 <body>
@@ -187,6 +205,7 @@
                 <li><a href="#jadwal">Jadwal Perawatan</a></li>
                 <li><a href="#media">Media Pembelajaran</a></li>
                 <li><a href="#kalkulator">Kalkulator</a></li>
+                <li><a href="#penyusun">Penyusun</a></li>
             </ul>
         </nav>
     </header>
@@ -212,6 +231,7 @@
         <section id="jadwal">
             <h2>Tabel Pembelajaran Perawatan Rutin</h2>
             <p>Anjing dan kucing memiliki karakteristik biologis serta kebutuhan medis yang sangat berbeda. Tabel di bawah ini menyajikan <strong>data perbandingan</strong> jadwal vaksinasi dasar dan rutinitas kebersihan secara terstruktur untuk memudahkan Anda dalam merencanakan perawatan harian.</p>
+
             <table>
                 <tr>
                     <th>Perawatan Utama</th>
@@ -281,6 +301,34 @@
 
             <div id="hasil-kalkulasi"></div>
         </section>
+
+        <section id="penyusun">
+            <h2>Penyusun Website</h2>
+            <p>Website ini dibuat oleh <strong>Kelompok F</strong> untuk memenuhi tugas kelas.</p>
+
+            <table class="penyusun-table">
+                <tr>
+                    <th>Nama</th>
+                    <th>NIM</th>
+                    <th>Tugas</th>
+                </tr>
+                <tr>
+                    <td>Ardhia Rezli Metodiar</td>
+                    <td>250401010624</td>
+                    <td>Perancangan & HTML</td>
+                </tr>
+                <tr>
+                    <td>Raihan Aly Kanz Pane</td>
+                    <td>250401010230</td>
+                    <td>Materi & Konten</td>
+                </tr>
+                <tr>
+                    <td>Rico Maulana Putra Wibowo</td>
+                    <td>250401010031</td>
+                    <td>Desain & Pengujian Website</td>
+                </tr>
+            </table>
+        </section>
     </main>
 
     <footer>
@@ -303,6 +351,7 @@
             }
 
             var porsi = 0;
+
             if (jenis === "Kucing") {
                 porsi = berat * 20;
             } else if (jenis === "Anjing") {
@@ -313,8 +362,10 @@
             hasilDiv.style.color = "#16a085";
             hasilDiv.style.backgroundColor = "#e8f8f5";
             hasilDiv.style.borderColor = "#1abc9c";
+
             hasilDiv.innerHTML = "Estimasi porsi makanan harian ideal untuk <strong>" + jenis + "</strong> dengan berat <strong>" + berat + " Kg</strong> adalah: <br> <span style='font-size: 24px; font-weight: bold;'>" + porsi + " Gram / Hari</span>";
         }
     </script>
+
 </body>
 </html>
